@@ -1,2 +1,37 @@
-<h1>Admin::Recipe#new</h1>
-<p>Find me in app/views/admin/recipe/new.html.erb</p>
+<h1>New recipe</h1>
+<div>
+  <% if @recipe.errors.any? %>
+    <ul>
+      <% @recipe.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<%= form_for [:admin, @recipe], method: :create do |recipe| %>
+  <div class="group flex-for-div">
+    <%= recipe.label :name %>
+    <%= recipe.text_area :name %>
+  </div>
+  <div class="group flex-for-div">
+    <%= recipe.label :ingredient_details %>
+    <%= recipe.text_area :ingredient_details, class:"div-size" %>
+  </div>
+  <div class="group flex-for-div" class="div-size">
+    <%= recipe.label :description %>
+    <%= recipe.text_area :description, class:"div-size" %>
+  </div>
+  <div class="group flex-for-div">
+    <%= recipe.label :img_url %>
+    <%= recipe.text_area :img_url, class:"url-size"%>
+  </div>
+  <div class="group flex-for-div">
+    <%= collection_select(:ingredient, :ingredient_id, @ingredients_ordered, :id, :name, {} ,
+      {:multiple => true, class:"js-selectpicker"}) %>
+  </div>
+  <div class="group">
+    <%= recipe.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', admin_recipes_path %>

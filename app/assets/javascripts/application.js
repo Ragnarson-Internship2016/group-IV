@@ -13,8 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require select2
 //= require material.min
 //= require_tree .
 document.addEventListener('turbolinks:load', function() {
   componentHandler.upgradeDom();
+  $(".js-selectpicker").select2({
+    placeholder: "Select ingredients",
+    allowClear: true
+  });
 });

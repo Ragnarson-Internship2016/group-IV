@@ -1,8 +1,10 @@
 /*
  *= require material.min
  *= require layout
+ *= require select2
  */
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:500,600);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import "recipes";
-@import "recipe"
+@import "recipe";
+@import "admin";
