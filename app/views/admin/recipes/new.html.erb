@@ -9,7 +9,7 @@
   <% end %>
 </div>
 <%= form_for [:admin, @recipe], method: :create do |recipe| %>
-  <div class="group flex-for-div url-size">
+  <div class="group flex-for-div">
     <%= recipe.label :name %>
     <%= recipe.text_area :name %>
   </div>

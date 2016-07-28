@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'contact' => 'contact#index'
   get 'recipes/random' => 'recipes#random'
 
   resources :recipes,     only: [:index, :show]

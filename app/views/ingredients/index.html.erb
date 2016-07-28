@@ -5,17 +5,18 @@
   </div>
 
   <div class="mdl-cell mdl-cell--6-col lunch-main-right">
-    <a href="#section2"><button class="lunch-main__button advent-pro-font">YES!</button></a>
+    <a href="#section2" class="scroll"><button class="lunch-main__button advent-pro-font">YES!</button></a>
   </div>
 </div>
 
 <div id="section2" class="mdl-grid ingrediets-cover lunch-gap--none grid--center">
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--6-col ingredients-cover--center">
     <h1 class="ingredients-question">What do you have in your fridge?</h1>
     <%= image_tag "fridge.png", class: "fridge-image" %>
 
     <%= form_tag(recipes_path, method: "get", class: "form mdl-grid grid--center") do %>
-      <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name"), class: "mdl-cell--12-col select-landing" %>
+      <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name"),
+        class: "mdl-cell--12-col select-landing" %>
       <%= button_tag("GO!", class: "ingredients-go__button advent-pro-font mdl-cell--12-col") %>
     <% end %>
   </div>

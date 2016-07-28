@@ -7,6 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="icon" sizes="16x16" href="/assets/logo/favicon.ico">
   </head>
 
   <body>
@@ -18,11 +19,12 @@
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">LUNCHER</span>
-        <nav class="mdl-navigation">
+        <nav class="mdl-navigation advent-pro-fon">
           <%= link_to "Home", root_path, class: "mdl-navigation__link"%>
           <%= link_to "Recipes", recipes_path, class: "mdl-navigation__link"%>
-          <%= link_to "Random", recipes_random_path, class: "mdl-navigation__link"%>
-          <%= link_to "Admin", admin_recipes_path, class: "mdl-navigation__link" %>
+          <%= link_to "Random!", recipes_random_path, class: "mdl-navigation__link"%>
+          <%= link_to "Contact", contact_path, class: "mdl-navigation__link"%>
+          <%= link_to "Log in", admin_recipes_path, class: "mdl-navigation__link" %>       
         </nav>
       </div>
       <main class="mdl-layout__content">

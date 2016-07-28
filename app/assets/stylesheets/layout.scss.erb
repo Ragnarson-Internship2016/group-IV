@@ -1,3 +1,19 @@
+$color-brand: #f9f9f9;
+
+body {
+  background-color: $color-brand;
+}
+
+/*-- link --:*/
+.link {
+  font-size: 2em;
+  color: #000;
+
+  &:hover {
+    color: darken($color-brand, 50%);
+  }
+}
+
 /*-- layout --*/
 .advent-pro-font {
   font-family: 'Advent Pro', sans-serif !important;
@@ -5,9 +21,8 @@
 }
 
 /*-- header --*/
-
 .lunch-header {
-  background-color: #f9f9f9;
+  background-color: $color-brand;
 }
 
 .lunch-header-row {
@@ -23,11 +38,10 @@
 }
 
 /*-- index layout --*/
-
 .lunch-cover {
   background: url(<%= asset_path("top2.png") %>) center / cover;
   width: 100%;
-  height: 659px;
+  height: 100vh;
 }
 
 .lunch-gap--none {
@@ -36,7 +50,6 @@
 }
 
 /*-- index --*/
-
 .lunch-main-right {
   margin: auto;
   padding: 0;
@@ -70,8 +83,8 @@
 }
 
 /*-- index elements--*/
-
-.lunch-main__button {
+.lunch-main__button,
+.ingredients-go__button {
   color: white;
   background: black;
   padding: 0;
@@ -82,6 +95,10 @@
   font-size: 4em;
   left: -17%;
   position: relative;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .position-inherit {
@@ -90,15 +107,21 @@
 
 /*-- ingredients --*/
 .ingrediets-cover {
-  background-color: #f9f9f9;
   width: 100%;
-  height: 659px;
+  height: 100vh;
   text-align: center;
+}
+
+.ingredients-cover--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .fridge-image {
   margin-top: 20px;
   margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .form {
@@ -116,15 +139,7 @@
 }
 
 .ingredients-go__button {
-  color: white;
-  background: black;
-  padding: 0;
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  border: 0;
-  font-size: 4em;
-  position: relative;
+  left: 0;
   margin-top: 30px;
 }
 

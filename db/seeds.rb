@@ -1,6 +1,6 @@
 Recipe.destroy_all
 Ingredient.destroy_all
-IngredientsRecipe.destroy_all
+#IngredientsRecipe.destroy_all
 
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.
   Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum,
@@ -12,7 +12,8 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh aug
 image_url = "http://d.wpimg.pl/180968739-1296107597/stek-wolowina-miesko.jpg"
 image2_url = "http://kuchnialidla.e51-po.insyscd.net/vod/img/PosterLarge/6d2fd428d6-Cukiernik_KW_34_deser_sliwkowo-czekoladowy_12976_S124495_RGB_960x540.jpg"
 image3_url = "http://s3.party.pl/styl-zycia/dom/kuchnia-przepisy/deser-z-granatem-338830-article.jpg"
-details = "Bottle of wine \n bread \n salt"
+
+details = "Bottle of wine"
 
 [
    { name: 'venetian-style pasta', description: lorem, img_url: image_url, ingredient_details: details },

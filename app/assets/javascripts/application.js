@@ -16,6 +16,18 @@
 //= require select2
 //= require material.min
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  $(".scroll").on('click', function(event){
+      event.preventDefault();
+
+      //goto that anchor by setting the body scroll top to anchor top
+      $('.mdl-layout__content').animate({
+        scrollTop: $('#section2').offset().top
+      }, 500);
+  });
+})
+
 document.addEventListener('turbolinks:load', function() {
   componentHandler.upgradeDom();
   $(".js-selectpicker").select2({
