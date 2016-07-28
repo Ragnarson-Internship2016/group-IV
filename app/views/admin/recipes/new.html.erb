@@ -9,7 +9,7 @@
   <% end %>
 </div>
 <%= form_for [:admin, @recipe], method: :create do |recipe| %>
-  <div class="group flex-for-div">
+  <div class="group flex-for-div url-size">
     <%= recipe.label :name %>
     <%= recipe.text_area :name %>
   </div>
@@ -21,9 +21,9 @@
     <%= recipe.label :description %>
     <%= recipe.text_area :description, class:"div-size" %>
   </div>
-  <div class="group flex-for-div">
+  <div class="group flex-for-div url-size">
     <%= recipe.label :img_url %>
-    <%= recipe.text_area :img_url, class:"url-size"%>
+    <%= recipe.text_area :img_url %>
   </div>
   <div class="group flex-for-div">
     <%= collection_select(:ingredient, :ingredient_id, @ingredients_ordered, :id, :name, {} ,
