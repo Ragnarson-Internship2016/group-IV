@@ -1,10 +1,7 @@
 <div class="custom-container">
 <h3>Recipes:</h3>
-
-<button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-container">
-<%= link_to 'add new', [:new, :admin, :recipe] %>
-</button>
-
+<%= link_to 'add new', [:new, :admin, :recipe],
+class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-container" %>s
 <table width="100%">
   <thead>
     <tr>
