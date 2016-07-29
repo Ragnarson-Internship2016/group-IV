@@ -9,7 +9,7 @@
     </ul>
   <% end %>
 </div>
-<%= form_for [:admin, @recipe], method: :create do |recipe| %>
+<%= form_for [:admin, @recipe], method: :post do |recipe| %>
   <div class="flex-for-div">
     <%= recipe.label :name, class:"middle-text" %>
     <%= recipe.text_area :name %>
@@ -27,7 +27,7 @@
     <%= recipe.text_area :description, class:"textarea-size" %>
   </div>
   <div class="group flex-for-div">
-    <%= collection_select(:ingredient, :ingredient_id, @ingredients_ordered, :id, :name, {} ,
+    <%= collection_select(:ingredient, :ingredient_id, Ingredient.all.order(:name), :id, :name, {} ,
     {:multiple => true, class:"js-selectpicker"}) %>
   </div>
   <div class="group margin">

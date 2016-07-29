@@ -10,7 +10,6 @@ class Admin::RecipesController < Admin::BaseController
 
   def new
     @recipe = Recipe.new
-    @ingredients_ordered = Ingredient.all.order(:name)
   end
 
   def create
@@ -27,7 +26,6 @@ class Admin::RecipesController < Admin::BaseController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    @ingredients_ordered = Ingredient.all.order(:name)
   end
 
   def update

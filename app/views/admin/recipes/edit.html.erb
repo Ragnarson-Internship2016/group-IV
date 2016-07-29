@@ -28,7 +28,7 @@
     <%= recipe.text_area :description, class:"textarea-size" %>
   </div>
   <div class="group flex-for-div">
-    <%= collection_select(:ingredient, :ingredient_id, @ingredients_ordered, :id, :name,
+    <%= collection_select(:ingredient, :ingredient_id, Ingredient.all.order(:name), :id, :name,
       {selected: @recipe.ingredients.map(&:id)} ,{:multiple => true, class:"js-selectpicker"}) %>
   </div>
   <div class="group margin">
